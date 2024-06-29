@@ -1,28 +1,40 @@
 package com.example.demo.models;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name="leases")
 public class LeaseModel {
+
     @Id
+    @Column(name="id")
     private String id;
 
+    @Column(name="paid")
     private String paid;
+
+    @Column(name="apartmentamenities")
     private String apartmentAmenities;
 
+    @Column(name="roommatessituations")
     private String roommatesSituations;
 
-    // this should be handled as bytes
+    @Column(name="pictures")
     private String pictures;
 
+    @Column(name="location")
     private String location;
 
     //type of unit (house, studio apt, dorm, 1 br, etc)
+    @Column(name="unittype")
     private String unitType;
 
     //is utilities paid? included, avg cost?
+    @Column(name="utilitiessituation")
     private String utilitiesSitutation;
 
     //owner info (first name, relation to university, title)
+    @Column(name="ownername")
     private String ownerName;
 
 
