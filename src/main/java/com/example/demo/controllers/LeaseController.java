@@ -1,15 +1,16 @@
 package com.example.demo.controllers;
 
 import com.example.demo.models.LeaseModel;
-import com.example.demo.services.Leasing;
+import com.example.demo.services.LeasingService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "*", allowedHeaders = "Content-Type")
+@CrossOrigin
 public class LeaseController {
-    private final Leasing postLease;
 
-    public LeaseController(Leasing postLease) {
+    private final LeasingService postLease;
+
+    public LeaseController(LeasingService postLease) {
         this.postLease = postLease;
     }
 
@@ -18,8 +19,8 @@ public class LeaseController {
         postLease.postLease(lease);
     }
 
-    @GetMapping("/lease")
-    public void getLease(@RequestBody LeaseModel lease) {
-        postLease.getLease(lease);
+    @GetMapping("/lease/{id}")
+    public LeaseModel getLease(@PathVariable String id) {
+        return postLease.getLease(id);
     }
 }
