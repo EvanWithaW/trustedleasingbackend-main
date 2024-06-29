@@ -7,8 +7,9 @@ import jakarta.persistence.*;
 public class LeaseModel {
 
     @Id
-    @Column(name="id")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "leases_seq")
+    @SequenceGenerator(name = "leases_seq", sequenceName = "leases_seq", allocationSize = 1)
+    private Long id;
 
     @Column(name="paid")
     private String paid;
@@ -38,11 +39,11 @@ public class LeaseModel {
     private String ownerName;
 
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
