@@ -1,0 +1,9 @@
+com/example/demo/repositories/UserRepository.class
+com/example/demo/TrustedLeasingApplication.class
+com/example/demo/models/LeaseModel.class
+com/example/demo/services/LeasingService.class
+com/example/demo/services/UserService.class
+com/example/demo/controllers/UserController.class
+com/example/demo/models/UserModel.class
+com/example/demo/controllers/LeaseController.class
+com/example/demo/repositories/LeaseRepository.class
