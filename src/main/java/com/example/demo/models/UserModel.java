@@ -1,16 +1,16 @@
 package com.example.demo.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "users")
 public class UserModel {
 
-    @jakarta.persistence.Id
     @Id
     private Long id;
+
     private String firstName;
     private String lastName;
     private String email;
