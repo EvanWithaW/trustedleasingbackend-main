@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Leasing {
+public class LeasingService {
 
     @Autowired
     private LeaseRepository leaseRepository;
@@ -18,8 +18,6 @@ public class Leasing {
     }
 
     public LeaseModel getLease(String id) {
-        // functionality to get from database
         return leaseRepository.findById(id).orElse(null);
-
     }
 }

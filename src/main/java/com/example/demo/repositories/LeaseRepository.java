@@ -1,9 +1,7 @@
 package com.example.demo.repositories;
 
 import com.example.demo.models.LeaseModel;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface LeaseRepository extends MongoRepository<LeaseModel,String> {
+public interface LeaseRepository extends JpaRepository<LeaseModel, String> {
 }
